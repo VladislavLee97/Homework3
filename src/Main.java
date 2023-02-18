@@ -6,6 +6,8 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
+        task8();
     }
     public static void task1 () {
         System.out.println("Задача 1");
@@ -110,31 +112,65 @@ public class Main {
 
     public static void task6 () {
         System.out.println("Задача 6");
-        byte totalBananas = 5;
+        float totalBananas = (float) 5.0;
         System.out.println("Всего бананов 5, 1 банан - 80 грамм");
-        short totalMilk = 200;
+        float totalMilk = (float) 200.0;
         System.out.println("Всего молока " + totalMilk  + " мл, 100 мл = 105 грамм");
-        short iceCreamSundae = 2;
+        float iceCreamSundae = (float) 2.0;
         System.out.println("Мороженное пломбир" + iceCreamSundae + " брикета по 100 грамм");
-        byte rawEgg = 4;
+        float rawEgg = (float) 4.0;
         System.out.println("Яица сырые " + rawEgg + " 1 яицо 70 грамм");
         //
-        int fiveGramsOfBananas = totalBananas * 80;
+        float fiveGramsOfBananas = totalBananas * 80;
         System.out.println("В 5 бананах " + fiveGramsOfBananas + " грамм");
-        int mlMilk = 105 * 2;
+        float mlMilk = (float) 105 * 2;
         System.out.println("В 200 мл молока " + mlMilk + " грамм");
-        short iceCreamGrams = 100 * 2;
+        float iceCreamGrams = 100 * 2;
         System.out.println("В 2 брикетах мороженного " + iceCreamGrams + " грамм");
-        short rawEggsGram = 70 * 4;
+        float rawEggsGram = 70 * 4;
         System.out.println("В 4 сырых яицах " + rawEggsGram + " грамм");
-        int totalGramsOfProducts = rawEggsGram + iceCreamGrams + mlMilk + fiveGramsOfBananas;
+        float totalGramsOfProducts = rawEggsGram + iceCreamGrams + mlMilk + fiveGramsOfBananas;
         System.out.println("Вес всех продуктов в граммах составил " + totalGramsOfProducts);
-        double kgOfBananas = 400.0 / 1000;
-        System.out.println("Бананы из грамм в кг " + kgOfBananas);
+        float gramsToKilograms = totalGramsOfProducts / 1000;
+        System.out.println("Вес продуктов в килограмах составил " + gramsToKilograms);
+    }
+    public static void task7 () {
+        System.out.println("Задача 7");
+        System.out.println("Правила соревнований обновились, и спортсмену, чтобы оставаться в своей весовой категории, + нужно сбросить 7 кг. Тренер скорректировал рацион так, чтобы спортсмен мог терять в весе от 250 до 500 грамм в день. Посчитайте, сколько дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм, а сколько — если каждый день будет худеть на 500 грамм. Посчитайте, сколько может потребоваться дней в среднем, чтобы добиться результата похудения. Результаты всех подсчетов выведите в консоль.");
+        short loseWeightIn4Days250 = 250 * 4;
+        System.out.println("За 4 дня спортсмен теряет " + loseWeightIn4Days250 + " грамм веса ");
+        short loseWeightIn7Days250 = (short) (loseWeightIn4Days250 * 7);
+        byte totalDays250 = 4 * 7;
+        System.out.println("Если спортсмен будет сбрасывать вес на 250 грамм в день то за " + totalDays250 + " дней он сбросит " + loseWeightIn7Days250 + " грамм, тоесть 7кг");
+        short loseWeightIn7Days500 = (500 * 2) * 7;
+        byte totalDays500 = 2 * 7;
+        System.out.println("Если спортсмен будет сбрасывать вес на 500 грамм в день то за " + totalDays500 + " дней он сбросит " + loseWeightIn7Days500 + " грамм, тоесть 7кг");
+    }
 
-
-
-
+    public static void task8 () {
+        System.out.println("Задача 8");
+        System.out.println("Представим, что мы работаем в большой компании, штат которой состоит из нескольких сотен сотрудников. В компании есть правило: чем дольше сотрудник работает в компании, тем ценнее он для бизнеса. Поэтому сотрудники, которые работают в компании дольше 3 лет, получают повышение зарплаты раз в год. Каждый год повышение составляет 10% от текущей зарплаты.");
+        System.out.println("К вам пришел руководитель с задачей автоматизировать повышение зарплаты, а также провести расчет для следующих сотрудников:");
+        int mashasMonthlySalary = 67760;
+        System.out.println("Зарплата Маши в месяц составляет " + mashasMonthlySalary);
+        int denissMonthySalary = 83690;
+        System.out.println("Зарплата Дениса в месяц составляет " + denissMonthySalary);
+        int christinasMothlySalary = 76230;
+        System.out.println("Зарплата Кристины в месяц составляет " + christinasMothlySalary);
+        byte twelveMonths = 12;
+        float tenPercent = (float) 10 / 100;
+        float masha10Percent = tenPercent * mashasMonthlySalary + mashasMonthlySalary;
+        int mashasAnnualIncome = mashasMonthlySalary * twelveMonths;
+        float mashasAnnualIncomeWith10Percent = masha10Percent * twelveMonths;
+        System.out.println("Маша теперь получает " + masha10Percent + " рублей. Годовой доход Маши составлял " + mashasAnnualIncome + " а сейчас годовой доход вырос на " + mashasAnnualIncomeWith10Percent + " рублей");
+        float denis10Percent = tenPercent * denissMonthySalary + denissMonthySalary;
+        int denisAnnualIncome = denissMonthySalary * twelveMonths;
+        float denisAnnualIncomeWith10Percent = denis10Percent * twelveMonths;
+        System.out.println("Денис теперь получает " + denis10Percent + " рублей. Годовой доход Дениса составлял " + denisAnnualIncome + " а сейчас годовой дохот вырос на " + denisAnnualIncomeWith10Percent + " рублей");
+        float christina10Percent = tenPercent * christinasMothlySalary + christinasMothlySalary;
+        int christinasAnnualIncome = christinasMothlySalary * twelveMonths;
+        float christinaAnnualIncomeWith10Percent = christina10Percent * twelveMonths;
+        System.out.println("Кристина теперь получает " + christina10Percent + " рублей. Годовой доход Кристины составлял " + christinasAnnualIncome + " а сейчас годовой доход вырос на " + christinaAnnualIncomeWith10Percent + " рублей");
 
     }
 }
