@@ -11,18 +11,18 @@ public class Main {
     }
     public static void task1 () {
         System.out.println("Задача 1");
-        byte a = 12;
-        System.out.println(a);
-        short b = 10232;
-        System.out.println(b);
-        int c = 1999001;
-        System.out.println(c);
-        long d = 1230000000L;
-        System.out.println(d);
-        float e = -200.00F;
-        System.out.println(e);
-        double j = -500.000F;
-        System.out.println(j);
+        byte aa = 12;
+        System.out.println ("Значение переменной " + aa + " с типом byte равно 12 ");
+        short bb = 10232;
+        System.out.println("Значение переменной " + bb + " с типом short равно 10232");
+        int cc = 1999001;
+        System.out.println("Значение переменной " + cc + " с типом int равно 1999001");
+        long dd = 1230000000L;
+        System.out.println("Значение переменной " + dd + " с типом long равно 1230000000L");
+        float ee = -200.00F;
+        System.out.println("Значение переменной " + ee + " с типом float равно 200.00");
+        double jj = -500.000F;
+        System.out.println("Значение переменной " +  jj + " с типом double равно 500.000");
     }
 
     public static void task2() {
@@ -60,12 +60,10 @@ public class Main {
 
     public static void task4 () {
         System.out.println("Задача 4");
-        //
         byte bottlesPerMinute = 16 / 2;
         System.out.println("Производство бутылок в минуту " + bottlesPerMinute);
         int productionOfBottlesIn20Minutes = bottlesPerMinute * 20;
         System.out.println("За 20 минут машина произвела " + productionOfBottlesIn20Minutes + " штук бутылок");
-        //
         byte timePerDay = 24;
         System.out.println("В сутки " + timePerDay + " часа");
         byte timePerHour = 60;
@@ -74,14 +72,12 @@ public class Main {
         System.out.println("В 24 часа " + minutesIn24Hours + " минут");
         int productionOfBottlesIn24Hours = minutesIn24Hours * bottlesPerMinute;
         System.out.println("За сутки машина произвела " + productionOfBottlesIn24Hours + " штук бутылок");
-        //
         int in3Days =  timePerDay * 3;
         System.out.println("В 3 сутках " + in3Days + " часа");
         int minutesIn72Hour = in3Days * timePerHour;
         System.out.println("В 72 часа " + minutesIn72Hour + " минут");
         int minutesIn3days = minutesIn72Hour * bottlesPerMinute;
         System.out.println("за 3 сутки машина произвела " + minutesIn3days + " штук бутылок");
-        //
         byte month = 30;
         System.out.println("В одном месяце " + month + " дней");
         int hoursIn30Days = month * timePerDay;
@@ -112,16 +108,16 @@ public class Main {
 
     public static void task6 () {
         System.out.println("Задача 6");
-        float totalBananas = (float) 5.0;
+        float totalBananas = 5.0f;
         System.out.println("Всего бананов 5, 1 банан - 80 грамм");
-        float totalMilk = (float) 200.0;
+        float totalMilk = 200.0f;
         System.out.println("Всего молока " + totalMilk  + " мл, 100 мл = 105 грамм");
-        float iceCreamSundae = (float) 2.0;
+        float iceCreamSundae = 2.0f;
         System.out.println("Мороженное пломбир" + iceCreamSundae + " брикета по 100 грамм");
-        float rawEgg = (float) 4.0;
+        float rawEgg = 4.0f;
         System.out.println("Яица сырые " + rawEgg + " 1 яицо 70 грамм");
         //
-        float fiveGramsOfBananas = totalBananas * 80;
+        float fiveGramsOfBananas = totalBananas * 80f;
         System.out.println("В 5 бананах " + fiveGramsOfBananas + " грамм");
         float mlMilk = (float) 105 * 2;
         System.out.println("В 200 мл молока " + mlMilk + " грамм");
@@ -158,7 +154,7 @@ public class Main {
         int christinasMothlySalary = 76230;
         System.out.println("Зарплата Кристины в месяц составляет " + christinasMothlySalary);
         byte twelveMonths = 12;
-        float tenPercent = (float) 10 / 100;
+        float tenPercent = 10f / 100f;
         float masha10Percent = tenPercent * mashasMonthlySalary + mashasMonthlySalary;
         int mashasAnnualIncome = mashasMonthlySalary * twelveMonths;
         float mashasAnnualIncomeWith10Percent = masha10Percent * twelveMonths;
@@ -171,6 +167,5 @@ public class Main {
         int christinasAnnualIncome = christinasMothlySalary * twelveMonths;
         float christinaAnnualIncomeWith10Percent = christina10Percent * twelveMonths;
         System.out.println("Кристина теперь получает " + christina10Percent + " рублей. Годовой доход Кристины составлял " + christinasAnnualIncome + " а сейчас годовой доход вырос на " + christinaAnnualIncomeWith10Percent + " рублей");
-
     }
 }
